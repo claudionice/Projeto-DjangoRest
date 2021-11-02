@@ -9,6 +9,19 @@ class Alunos (models.model):
     def _str_ (self):
         return self.nome 
 
+class Curso (models.Model):
+    NIVEL = (
+        ('B', 'Basico'),
+        ('I', 'Intermediario'),
+        ('A', 'Avancado'),
+    )
+    codigo_curso = models.CharField (max_lenght = 10)
+    descricao = models.CharField (max_lenght = 100)
+    nivel = model.CharField (max_lenght = 1, choices = NIVEL, blank = False, Null = False, default = 'B')
+
+    
+
+
 
 
 # Create your models here.
