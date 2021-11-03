@@ -9,15 +9,15 @@ class alunos (models.Model):
     def _str_ (self):
         return self.nome 
 
-class Curso (models.Model):
+class curso (models.Model):
     NIVEL = (
         ('B', 'Basico'),
         ('I', 'Intermediario'),
         ('A', 'Avancado'),
     )
-    codigo_curso = models.CharField (max_length = 10)
-    descricao = models.CharField (max_length = 100)
-    nivel = models.CharField (max_length=1, choices=NIVEL, blank=False, null=False, default='B')
+    codigo_curso= models.CharField (max_length = 10)
+    descricao= models.CharField (max_length = 100)
+    nivel= models.CharField (max_length=1, choices=NIVEL, blank=False, null=False, default='B')
 
     def _str_ (self):
         return self.descricao
