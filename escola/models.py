@@ -1,6 +1,6 @@
 from django.db import models
 
-class Alunos (models.Model):
+class alunos (models.Model):
     nome = models.CharField (max_length=30)
     rg = models.CharField (max_length=9)
     cpf = models.CharField (max_length=11)
